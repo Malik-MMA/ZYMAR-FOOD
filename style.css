@@ -28,12 +28,19 @@ nav a {
     margin-left: 25px;
     text-decoration: none;
     color: #2E2E2E;
+    font-weight: 500;
 }
 
 /* HERO */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(255, 111, 0, 0.75), rgba(0, 255, 234, 0.75)), url("hero.jpg");
+    background: linear-gradient(
+        rgba(255, 111, 0, 0.75),
+        rgba(0, 255, 234, 0.75)
+    ),
+    url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +51,7 @@ nav a {
     text-align: center;
 }
 
+/* ORDER BUTTON ANIMATION */
 .hero-content button {
     padding: 14px 35px;
     border-radius: 30px;
@@ -52,6 +60,13 @@ nav a {
     color: #FF6F00;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+    background: #FF6F00;
+    color: white;
+    transform: scale(1.1);
 }
 
 /* SECTIONS */
@@ -67,6 +82,7 @@ nav a {
     flex-wrap: wrap;
 }
 
+/* CARD ANIMATION */
 .card {
     width: 220px;
     height: 260px;
@@ -77,6 +93,12 @@ nav a {
     align-items: flex-end;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card span {
@@ -86,17 +108,17 @@ nav a {
     padding: 15px;
 }
 
-/* IMAGES */
+/* IMAGES (FIXED PATHS) */
 .pizza {
-    background-image: url("pizza.jpg");
+    background-image: url("../images/pizza.jpg");
 }
 
 .burger {
-    background-image: url("burger.jpg");
+    background-image: url("../images/burger.jpg");
 }
 
 .FreshBite {
-    background-image: url("big.jpg");
+    background-image: url("../images/big.jpg");
 }
 
 /* LOGIN */
@@ -121,6 +143,11 @@ nav a {
     background: #FF6F00;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background: #e65c00;
 }
 
 /* FOOTER */
