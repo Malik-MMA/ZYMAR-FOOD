@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Restaurants | FoodoraX</title>
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="restaurants.html">Restaurants</a>
-  <a href="offers.html">Offers</a>
-  <a href="login.html">Login</a>
-</nav>
-
+    <title>Restaurants</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1 class="logo">FoodoraX</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="offers.html">Offers</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+<header>
+    <h1 class="logo">FoodoraX</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="offers.html">Offers</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
 
-    <section class="featured">
-        <h3>Select Restaurant</h3>
+<section class="featured">
+    <h3>Select a Restaurant</h3>
 
-        <div class="cards">
-            <div class="card pizza" onclick="selectRestaurant('Pizza Hut')">
-                <span>Pizza Hut</span>
-            </div>
-
-            <div class="card burger" onclick="selectRestaurant('Burger King')">
-                <span>Burger King</span>
-            </div>
-
-            <div class="card FreshBite" onclick="selectRestaurant('Fresh Bite')">
-                <span>Fresh Bite</span>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function selectRestaurant(name) {
-            localStorage.setItem("restaurant", name);
-            window.location.href = "menu.html";
-        }
-    </script>
+    <div class="cards">
+        <div class="card pizza"><span>Pizza Hut</span></div>
+        <div class="card burger"><span>Burger King</span></div>
+        <div class="card FreshBite"><span>Fresh Bite</span></div>
+    </div>
+</section>
 
 </body>
-
 </html>
