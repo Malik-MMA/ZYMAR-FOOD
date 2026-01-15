@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu | FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+    </header>
+
+    <section class="featured">
+        <h3 id="restaurantName"></h3>
+
+        <div class="cards">
+            <div class="card" style="background-image:url('pizza.jpg')">
+                <span>Cheese Pizza<br>Rs.1200</span>
+            </div>
+
+            <div class="card" style="background-image:url('burger.jpg')">
+                <span>Chicken Burger<br>Rs.900</span>
+            </div>
+
+            <div class="card" style="background-image:url('big.jpg')">
+                <span>pancake<br>Rs.700</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("restaurantName").innerText =
+            "Menu - " + localStorage.getItem("restaurant");
+    </script>
+
+</body>
+
+</html>

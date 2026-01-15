@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="offers.html">Offers</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Fast & Fresh Food Delivered</h2>
+            <button onclick="window.location.href='restaurants.html'">
+                Order Now
+            </button>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Restaurants | FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="offers.html">Offers</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <section class="featured">
+        <h3>Select Restaurant</h3>
+
+        <div class="cards">
+            <div class="card pizza" onclick="selectRestaurant('Pizza Hut')">
+                <span>Pizza Hut</span>
+            </div>
+
+            <div class="card burger" onclick="selectRestaurant('Burger King')">
+                <span>Burger King</span>
+            </div>
+
+            <div class="card FreshBite" onclick="selectRestaurant('Fresh Bite')">
+                <span>Fresh Bite</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selectRestaurant(name) {
+            localStorage.setItem("restaurant", name);
+            window.location.href = "menu.html";
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu | FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+    </header>
+
+    <section class="featured">
+        <h3 id="restaurantName"></h3>
+
+        <div class="cards">
+            <div class="card" style="background-image:url('pizza.jpg')">
+                <span>Cheese Pizza<br>Rs.1200</span>
+            </div>
+
+            <div class="card" style="background-image:url('burger.jpg')">
+                <span>Chicken Burger<br>Rs.900</span>
+            </div>
+
+            <div class="card" style="background-image:url('big.jpg')">
+                <span>pancake<br>Rs.700</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("restaurantName").innerText =
+            "Menu - " + localStorage.getItem("restaurant");
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Offers | FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+    </header>
+
+    <section class="featured">
+        <h3>Special Offers</h3>
+
+        <div class="cards">
+            <div class="card">
+                <span>50% OFF Pizza</span>
+            </div>
+
+            <div class="card">
+                <span>Buy 1 Get 1 Burger</span>
+            </div>
+
+            <div class="card">
+                <span>Free Delivery over Rs.3000</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login | FoodoraX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">FoodoraX</h1>
+    </header>
+
+    <section class="featured">
+        <h3>Login</h3>
+
+        <form class="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
